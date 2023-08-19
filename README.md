@@ -4,21 +4,18 @@ This code gets the S3 attributes from the trigger event, then invokes the textra
 
 ## Code to Test Event
 
-"""
-You can use below code to create test event to test
-the Lambda function.
+```json
 {
-    "Records": [
-                {
-                "s3": {
-                    "bucket": {
-                    "name": "<Your_bucket_name>"
-                    },
-                    "object": {
-                    "key": "input/employment_form.png"
-                    }
-                }
-                }
-            ]
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "<Your_bucket_name>"
+        },
+        "object": {
+          "key": "input/employment_form.png"
+        }
+      }
+    }
+  ]
 }
-"""
